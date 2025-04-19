@@ -39,6 +39,7 @@ pipeline {
         }
         //parameters stage
         stage('Print Params') {
+            
             steps {
                 echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
