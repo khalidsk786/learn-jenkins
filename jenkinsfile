@@ -8,6 +8,7 @@ pipeline {
         disableConcurrentBuilds()
         //retry(1)
     }
+        //parameters
       parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -36,6 +37,7 @@ pipeline {
                 //error 'pipeline failed'
             }
         }
+        //parameters stage
         stage('Print Params') {
             steps {
                 echo "Hello ${params.PERSON}"
